@@ -1,7 +1,7 @@
 {
-  "name": "ink-docstrap",
-  "version": "1.3.0",
-  "decription": "A template for JSDoc3 based on Bootstrap and Bootswatch",
+  "name": "jsdocTmpl",
+  "version": "1.0.0",
+  "decription": "A template for JSDoc3 based on docstrap",
   "devDependencies": {
     "async": "~2.0.1",
     "grunt": "~1.0.1",
@@ -23,16 +23,19 @@
     "jsdoc3",
     "theme"
   ],
-  "author": {
+  "contributors": [{
     "email": "me@terryweiss.net",
     "name": "Terry Weiss"
-  },
+  },{
+    "email": "luckylooke@gmail.com",
+    "name": "Ctibor Laky"
+  }],
   "bugs": {
-    "url": "https://github.com/docstrap/docstrap/issues"
+    "url": "https://github.com/luckylooke/JS.Responsive.jsdocTmpl/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/docstrap/docstrap.git"
+    "url": "https://github.com/luckylooke/JS.Responsive.jsdocTmpl.git"
   },
   "main": "./template/publish.js",
   "dependencies": {
