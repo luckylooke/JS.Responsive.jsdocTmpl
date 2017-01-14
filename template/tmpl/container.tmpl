@@ -4,7 +4,7 @@
 ?>
     <?js if (doc.kind === 'mainpage' || (doc.kind === 'package')) { ?>
         <?js if (i === 0 && title !== 'Index'){ ?>
-            <h1 class="page-title notindex"><?js= title ?></h1>
+            <h1 class="page-title notindex">@(<?js= title ?>)</h1>
         <?js } ?>
 
         <div id="toc-content">
@@ -33,7 +33,7 @@
         </div>
 
     <?js } else if (doc.kind === 'source') { ?>
-        <h1 class="page-title"><?js= title ?></h1>
+        <h1 class="page-title">@(<?js= title ?>)</h1>
         <div id="toc-content">
             <div class="container">
                 <div class="row">
@@ -56,7 +56,7 @@
         </div>
 
     <?js } else { ?>
-        <h1 class="page-title"><?js= title ?></h1>
+        <h1 class="page-title">@(<?js= title ?>)</h1>
 
         <div id="toc-content">
             <div class="container">
