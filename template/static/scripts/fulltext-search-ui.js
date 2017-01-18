@@ -82,11 +82,11 @@ window.SearcherDisplay = (function($) {
             // show/hide no result message
             if(!results.length)
                 $("#noResults").show();
-            else
+            else{
                 $("#noResults").hide();
-
-            fragment.appendChild(resultsList);
-            resultsHolder.append(fragment);
+                fragment.appendChild(resultsList);
+                resultsHolder.append(fragment);
+            }
 
             $("#searchResults").modal({"show": true});
     };
