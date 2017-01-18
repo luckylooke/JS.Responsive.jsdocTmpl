@@ -79,6 +79,12 @@ window.SearcherDisplay = (function($) {
                 resultsList.appendChild(item);
             }
 
+            // show/hide no result message
+            if(!results.length)
+                $("#noResults").show();
+            else
+                $("#noResults").hide();
+
             fragment.appendChild(resultsList);
             resultsHolder.append(fragment);
 
