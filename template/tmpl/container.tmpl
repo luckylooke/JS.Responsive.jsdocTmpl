@@ -182,6 +182,22 @@
                                     <?js }); ?></dl>
                                 <?js } ?>
 
+
+
+                                 <?js
+                                    var customclass = doc.customclass;
+                                    if (customclass && customclass.length && customclass.forEach) {
+                                ?>
+                                    <h3 class="subsection-title">@(CSS classes)</h3>
+
+                                    <dl>
+                                        <?js customclass.forEach(function(item) { ?>
+                                            <dt> <?js= item.name ?> </dt> <?js if(item.description){ ?>  <dd><?js= item.description ?> </dd>  <?js } ?>
+                                        <?js }); ?>
+                                    </dl>
+
+                                <?js }?>
+
                                 <?js
                                     var methods = self.find({kind: 'function', memberof: title === 'Global' ? {isUndefined: true} : doc.longname});
                                     if (methods && methods.length && methods.forEach) {
@@ -222,7 +238,23 @@
                                     <dl><?js events.forEach(function(e) { ?>
                                         <?js= self.partial('method.tmpl', e) ?>
                                     <?js }); ?></dl>
-                                <?js } ?>
+                                <?js } else if(doc.fires){
+
+                                    var fires = doc.fires;
+                                    if (fires && fires.length && fires.forEach) {
+                                ?>
+                                    <h3 class="subsection-title">@(Fires)</h3>
+
+                                    <dl>
+                                        <?js fires.forEach(function(item) {
+                                            item = item.replace('event:', '') ?>
+                                            <dt> <?js= item.split(' - ')[0] ?> </dt> <dd><?js= item.split('Arguments:')[1] ?> </dd>
+                                        <?js }); ?>
+                                    </dl>
+                                <?js }
+
+                                }?>
+
                             </article>
 
                             </section>
