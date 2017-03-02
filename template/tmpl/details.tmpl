@@ -20,7 +20,7 @@ var self = this;
 		<ul class="dummy">
 			<li>@(<?js= version ?>)</li>
 		</ul>
-	</dd>
+	</dd></br>
 	<?js } ?>
 
 	<?js if (data.since) {?>
@@ -29,7 +29,7 @@ var self = this;
 		<ul class="dummy">
 			<li>@(<?js= since ?>)</li>
 		</ul>
-	</dd>
+	</dd></br>
 	<?js } ?>
 
 	<?js if (data.inherited && data.inherits) { ?>
@@ -40,7 +40,7 @@ var self = this;
 				<?js= this.linkto(data.inherits, this.htmlsafe(data.inherits)) ?>
 			</li>
 		</ul>
-	</dd>
+	</dd></br>
 	<?js } ?>
 
     <?js if (data.overrides) { ?>
@@ -142,7 +142,7 @@ var self = this;
 		<ul class="dummy">
 			<li>
 				<?js= self.linkto(meta.shortpath) ?><?js if (this.navOptions.linenums) {?>,
-				 <?js= self.linkto(meta.shortpath, 'line ' + meta.lineno, null, 'sunlight-1-line-' + meta.lineno) ?><?js } ?>
+				 <?js= self.linkto(meta.shortpath, ' line ' + meta.lineno, null, 'sunlight-1-line-' + meta.lineno) ?><?js } ?>
 			</li>
 		</ul>
 	</dd>
