@@ -366,8 +366,7 @@ function buildNav(members) {
 
     members.modules.forEach(function(m) {
       if (!hasOwnProp.call(seen, m.longname)) {
-
-        nav.module.members.push(linkto(m.longname, m.longname.replace("module:", "")));
+          nav.module.members.push(linkto(m.longname, m.prettyName));
       }
       seen[m.longname] = true;
     });
